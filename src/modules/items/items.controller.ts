@@ -1,12 +1,13 @@
-import { Controller, Get } from '@nestjs/common';
+import { Body, Controller, Get, Post } from '@nestjs/common';
 import { ItemsService } from "./items.service";
+import { CreateItemDto } from "./dtos/createItem.dto";
 
 @Controller('items')
 export class ItemsController {
-  constructor(private service: ItemsService) {
+  constructor(private itemService: ItemsService) {
   }
-  @Get()
-  async getnewitem(){
-    return await this.service.create()
+  @Post()
+   async create(@Body() itemDto: CreateItemDto){
+    return this.itemService.create(itemDto);
   }
 }

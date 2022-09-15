@@ -5,7 +5,7 @@ export type ItemDocument = Item & Document;
 
 @Schema()
 export class Item {
-  @Prop()
+  @Prop({unique: true})
   ref: string;
 
   @Prop()

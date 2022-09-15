@@ -22,6 +22,10 @@ export class ItemsService {
     }
   }
 
+  updateQuantityByRef(ref: string, quantity: number){
+    return this.ItemModel.updateMany({ref: ref},{ "quantity": quantity})
+  }
+
   deleteOneById(id: string){
     return this.ItemModel.deleteOne({_id: id})
   }

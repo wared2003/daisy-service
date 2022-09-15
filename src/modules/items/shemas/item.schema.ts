@@ -1,5 +1,6 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import { Document } from 'mongoose';
+import { IsString } from "class-validator";
 export type ItemDocument = Item & Document;
 
 @Schema()
@@ -9,6 +10,9 @@ export class Item {
 
   @Prop()
   name: string;
+
+  @Prop()
+  inventory: string;
 
   @Prop()
   imgUrls: [string];

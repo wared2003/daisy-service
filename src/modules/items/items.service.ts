@@ -8,7 +8,12 @@ import { CreateItemDto } from "./dtos/createItem.dto";
 export class ItemsService {
   constructor(@InjectModel(Item.name) private ItemModel: Model<ItemDocument>) {}
 
+  getManyByInventory(inventory: string){
+    return this.ItemModel.find({inventory: inventory})
+  }
+
    create(item): Promise<Item> | InternalServerErrorException {
+
     try {
       const createdItem = new this.ItemModel(item);
       return createdItem.save();
@@ -17,5 +22,8 @@ export class ItemsService {
     }
   }
 
+  deleteOneById(id: string){
+    return this.ItemModel.deleteOne({_id: id})
+  }
 
 }

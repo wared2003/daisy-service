@@ -18,18 +18,6 @@ export class CreateItemDto {
 
   @IsOptional()
   @IsString()
-  quantity: number;
-
-  @IsOptional()
-  @IsString()
-  emplacement: string;
-
-  @IsOptional()
-  @IsDate()
-  expirationDate: Date;
-
-  @IsOptional()
-  @IsString()
   precisions: string;
 
   @IsOptional()

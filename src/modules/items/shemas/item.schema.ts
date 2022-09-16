@@ -21,12 +21,6 @@ export class Item {
   quantity: number;
 
   @Prop()
-  emplacement: string;
-
-  @Prop()
-  expirationDate: Date;
-
-  @Prop()
   precisions: string;
 
   @Prop()

@@ -8,9 +8,7 @@ import { CreateItemDto } from "./dtos/createItem.dto";
 export class ItemsService {
   constructor(@InjectModel(Item.name) private ItemModel: Model<ItemDocument>) {}
 
-  getManyByInventory(inventory: string){
-    return this.ItemModel.find({inventory: inventory})
-  }
+
 
    create(item): Promise<Item> | InternalServerErrorException {
 
@@ -20,10 +18,6 @@ export class ItemsService {
     }catch {
       return new InternalServerErrorException('internal serveur error during item db persistance')
     }
-  }
-
-  updateQuantityByRef(ref: string, quantity: number){
-    return this.ItemModel.updateMany({ref: ref},{ "quantity": quantity})
   }
 
   deleteOneById(id: string){

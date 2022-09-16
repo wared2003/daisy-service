@@ -9,9 +9,6 @@ export class CreateItemDto {
   @IsString()
   name: string;
 
-  @IsString()
-  inventory: string;
-
   @IsOptional()
   @IsUrl({each: true})
   imgUrls: [string];

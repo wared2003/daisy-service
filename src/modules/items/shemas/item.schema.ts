@@ -12,13 +12,7 @@ export class Item {
   name: string;
 
   @Prop()
-  inventory: string;
-
-  @Prop()
   imgUrls: [string];
-
-  @Prop()
-  quantity: number;
 
   @Prop()
   precisions: string;

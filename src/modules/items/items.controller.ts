@@ -1,7 +1,7 @@
 import { Body, Controller, Delete, Get, Param, Patch, Post, Query } from '@nestjs/common';
 import { ItemsService } from "./items.service";
-import { CreateItemDto } from "./dtos/createItem.dto";
-import { UpdateItemDto } from "./dtos/updateItem.dto";
+import { CreateItemDto } from "./dto/createItem.dto";
+import { UpdateItemDto } from "./dto/updateItem.dto";
 
 /* This class is a controller that is using the ItemService class to create, update, and delete items */
 @Controller('items')

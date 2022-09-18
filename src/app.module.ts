@@ -11,7 +11,7 @@ import { InventoriesModule } from './modules/inventories/inventories.module';
     ConfigModule.forRoot({envFilePath: '.env'}),
     MongooseModule.forRoot(process.env.MONGO_CONNNECTION_STRING),
     ItemsModule,
-    InventoriesModule
+    InventoriesModule,
   ],
   controllers: [AppController],
   providers: [AppService],
